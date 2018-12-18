@@ -14,7 +14,7 @@ rpm -i --root=$CHROOT --nodeps centos-release-*.rpm
 
 
 linux32 yum --installroot=$CHROOT install -y rpm yum setarch
-sed -i 's|$arch|i686|; s|\$basearch|i686|g' $CHROOT/etc/yum.repos.d/*.repo
+sed -i 's|$arch|i686|; s|\$basearch|i386|g' $CHROOT/etc/yum.repos.d/*.repo
 
 mkdir -p $CHROOT/proc
 mkdir -p $CHROOT/dev
